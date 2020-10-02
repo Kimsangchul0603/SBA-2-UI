@@ -1,12 +1,18 @@
 import React from 'react';
-import Counter from './components/Counter'
+import { Provider } from 'react-redux'
+// import TodoInput from './components/TodoInput'
+// import TodoList from './components/TodoList'
+import store from './store'
+import Signup from './components/Signup'
+import ChatBot from './components/ChatBot'
 
-const App = () => { // lambda function notation
+const App = () => {
   return <>
-    <div>
-      <Counter/>
-    </div>
-  </>
+  <Provider store = {store}>
+  <div style={{width: "300px",margin: "0 auto"}}>
+      <Signup/>
+    </div></Provider>
+    </>
 }
 
 export default App;
